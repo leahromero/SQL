@@ -25,21 +25,21 @@ VALUES
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
-#Order by price
+#Order items from superstore by price
 SELECT item_name, price
 FROM superstore
 ORDER BY price
 
-#What is the MAX price from any item in superstore
+#What is the MAX price from superstore?
 SELECT MAX(price)
 FROM superstore;
 
-#What is the average price of an item in the kitchen supplies category
+#What is the average price of an item in the kitchen supplies category?
 SELECT AVG(price),
 FROM superstore 
 GROUP BY 'kitchen supplies'
 
-#What items have a price greater than or equal to 89.99 and order from highest to lowest
+#What items have a price greater than or equal to 89.99? Order from highest to lowest.
 SELECT item_name, price
 FROM superstore
 WHERE price >=89.99
